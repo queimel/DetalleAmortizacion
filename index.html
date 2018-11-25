@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detalle Amortización</title>
+    <link rel="stylesheet" href="css/simple-grid.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Detalle Amortización</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <label for="">Monto</label>
+            </div>
+            <div class="col-4">
+                <input type="text" name="monto" id="monto">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <label for="">Porcentaje Interés</label>
+            </div>
+            <div class="col-4">
+                <input type="text" name="interes" id="interes">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <label for="">Años</label>
+            </div>
+            <div class="col-4">
+                <input type="text" name="anios" id="anios">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button id="calcular">Calcular</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div id="mensajes">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table id="tablaResultados">
+                    <tr>
+                        <th>Años</th>
+                        <th>Cuota</th>
+                        <th>Cuota Interés</th>
+                        <th>Cuota Amortización</th>
+                        <th>Total Amortizado</th>
+                        <th>Capital</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
