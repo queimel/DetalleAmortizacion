@@ -7,6 +7,7 @@
 
     // Al hacer click, ejecuta una funcion donde hara las validaciones
     document.getElementById("calcular").addEventListener("click", function(){
+        limpiar();
         // borrar area msjes
         areaMsjes.innerHTML = "";
         areaMsjes.style.display="none;"
@@ -33,7 +34,7 @@
                         areaMsjes.style.display="block;"
                         anios.focus();
                     }else{
-                        
+
                         monto = parseInt(monto.value);
                         interes = parseFloat(interes.value);
                         interes = interes/100;
@@ -45,8 +46,9 @@
                         
                         var prevCapital = monto;
                         var prevTotAmort = 0;
-
+                        
                         for (let index = 1; index <= anios+1; index++) {
+                           
                             var row = tabla.insertRow(index);
                             var cell1 = row.insertCell(0);
                             var cell2 = row.insertCell(1);
@@ -74,6 +76,9 @@
                                 cell5.innerHTML = parseFloat(totalAmortizado).toFixed(0);
                                 cell6.innerHTML = parseFloat(capital).toFixed(0);
 
+                                
+                                
+
                             }
                         }
                     }
@@ -99,3 +104,13 @@ function getCuota(prestamo, interes, anios){
  - Agregar totales
  - eliminar filas de tabla cuando da click a btn consultar
  */
+function limpiar() {
+
+    var tableHeaderRowCount = 1;
+    var table = document.getElementById('tablaResultados');
+    var rowCount = table.rows.length;
+    for (var i = tableHeaderRowCount; i < rowCount; i++) {
+        table.deleteRow(tableHeaderRowCount);
+    }
+}
+    
