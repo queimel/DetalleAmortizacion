@@ -79,13 +79,13 @@
 
 
                                 cell2.innerHTML = Math.ceil(cuota);
-                                totalColumna1 = parseFloat(totalColumna1 + Math.ceil(cuota));
+                                totalColumna1 = parseFloat(totalColumna1 + cuota);
                                 cell3.innerHTML = parseFloat(cuotaInteres).toFixed(0);
                                 totalColumna2 = parseFloat(totalColumna2 + Math.ceil(parseFloat(cuotaInteres).toFixed(0)));
                                 cell4.innerHTML = parseFloat(cuotaAmortizacion).toFixed(0);
-                                totalColumna3 = parseFloat(totalColumna3) + Math.ceil(parseFloat(cuotaAmortizacion).toFixed(0));
+                                totalColumna3 = parseFloat(totalColumna3) + parseFloat(cuotaAmortizacion);
                                 cell5.innerHTML = parseFloat(totalAmortizado).toFixed(0);
-                                totalColumna4 = parseFloat(totalColumna4 ) +parseFloat(totalAmortizado).toFixed(0);
+                                totalColumna4 = parseFloat(totalColumna4 ) +parseFloat(totalAmortizado);
                                 cell6.innerHTML = parseFloat(capital).toFixed(0);  
                                 totalColumna5 = parseFloat(totalColumna5 + parseFloat(capital).toFixed(0));    
                     
@@ -106,10 +106,10 @@
                     var cell5 = row.insertCell(4);
                     var cell6 = row.insertCell(5);
                     
-                    cell1.innerHTML = "Total";
-                    cell2.innerHTML = totalColumna1;                
-                    cell3.innerHTML = totalColumna2;
-                    cell4.innerHTML = totalColumna3;
+                    cell1.innerHTML = "<strong>Total</strong>";
+                    cell2.innerHTML = "<strong>"+totalColumna1.toFixed(0)+"</strong>";                
+                    cell3.innerHTML = "<strong>"+totalColumna2.toFixed(0)+"</strong>";
+                    cell4.innerHTML = "<strong>"+totalColumna3.toFixed(0)+"</strong>";
 
                     
                 }
