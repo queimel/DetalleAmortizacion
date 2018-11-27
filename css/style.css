@@ -16,7 +16,7 @@ table tr td{
 th, td {
     color: #999;
     border: 1px solid #eee;
-    padding: 12px 35px;
+    padding: 12px 20px;
     border-collapse: collapse;
 }
 
@@ -25,6 +25,10 @@ th {
     color: #fff;
     text-transform: uppercase;
     font-size: 12px;
+}
+
+td{
+    text-align:  right;
 }
 
 th:last-child {
