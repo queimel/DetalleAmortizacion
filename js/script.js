@@ -110,7 +110,10 @@
                     cell2.innerHTML = "<strong>"+totalColumna1.toFixed(0)+"</strong>";                
                     cell3.innerHTML = "<strong>"+totalColumna2.toFixed(0)+"</strong>";
                     cell4.innerHTML = "<strong>"+totalColumna3.toFixed(0)+"</strong>";
-
+                    
+                    totalColumna1 = "";
+                    totalColumna2 = "";
+                    totalColumna3 = 0;
                     
                 }
             }else{
