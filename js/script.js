@@ -68,7 +68,7 @@
                             cell1.innerHTML = index -1;
 
                             if(index === 1){
-                                cell6.innerHTML = fNumber.go(monto);
+                                cell6.innerHTML = fNumber.go(monto,"$");
                             }else{
                                 
                                 var cuotaInteres = interes * prevCapital;
@@ -78,15 +78,15 @@
                                 prevCapital = capital;
 
 
-                                cell2.innerHTML = fNumber.go(Math.ceil(cuota));
+                                cell2.innerHTML = fNumber.go(Math.ceil(cuota),"$");
                                 totalColumna1 = parseFloat(totalColumna1 + cuota);
-                                cell3.innerHTML = fNumber.go(parseFloat(cuotaInteres).toFixed(0));
+                                cell3.innerHTML = fNumber.go(parseFloat(cuotaInteres).toFixed(0),"$");
                                 totalColumna2 = parseFloat(totalColumna2 + Math.ceil(parseFloat(cuotaInteres).toFixed(0)));
-                                cell4.innerHTML = fNumber.go(parseFloat(cuotaAmortizacion).toFixed(0));
+                                cell4.innerHTML = fNumber.go(parseFloat(cuotaAmortizacion).toFixed(0),"$");
                                 totalColumna3 = parseFloat(totalColumna3) + parseFloat(cuotaAmortizacion);
-                                cell5.innerHTML = fNumber.go(parseFloat(totalAmortizado).toFixed(0));
+                                cell5.innerHTML = fNumber.go(parseFloat(totalAmortizado).toFixed(0),"$");
                                 totalColumna4 = parseFloat(totalColumna4 ) +parseFloat(totalAmortizado);
-                                cell6.innerHTML = fNumber.go(parseFloat(capital).toFixed(0)); 
+                                cell6.innerHTML = fNumber.go(parseFloat(capital).toFixed(0),"$"); 
                                 totalColumna5 = parseFloat(totalColumna5 + parseFloat(capital).toFixed(0));    
                     
                              
@@ -107,9 +107,9 @@
                     var cell6 = row.insertCell(5);
                     
                     cell1.innerHTML = "<strong>Total</strong>";
-                    cell2.innerHTML = "<strong>"+fNumber.go(totalColumna1.toFixed(0)) +"</strong>";                
-                    cell3.innerHTML = "<strong>"+fNumber.go(totalColumna2.toFixed(0))+"</strong>";
-                    cell4.innerHTML = "<strong>"+fNumber.go(totalColumna3.toFixed(0))+"</strong>";
+                    cell2.innerHTML = "<strong>"+fNumber.go(totalColumna1.toFixed(0),"$") +"</strong>";                
+                    cell3.innerHTML = "<strong>"+fNumber.go(totalColumna2.toFixed(0),"$")+"</strong>";
+                    cell4.innerHTML = "<strong>"+fNumber.go(totalColumna3.toFixed(0),"$")+"</strong>";
                     
                     totalColumna1 = "";
                     totalColumna2 = "";
