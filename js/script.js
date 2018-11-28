@@ -68,7 +68,7 @@
                             cell1.innerHTML = index -1;
 
                             if(index === 1){
-                                cell6.innerHTML = monto;
+                                cell6.innerHTML = fNumber.go(monto);
                             }else{
                                 
                                 var cuotaInteres = interes * prevCapital;
