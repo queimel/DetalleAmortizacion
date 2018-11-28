@@ -5,10 +5,9 @@
     totalColumna3 = 0;
     totalColumna4 = 0;
     totalColumna5 = 0;
-    total = "Total";
 
     // declaramos variables
-    var monto, anio, interes, areaMsjes, cuota;
+    var monto, anios, interes, areaMsjes, cuota;
     //asignamos area mensajes en variable
     areaMsjes = document.getElementById("mensajes");
     areaMsjes.style.display="none;"
