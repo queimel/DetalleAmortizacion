@@ -25,19 +25,19 @@
 
         // validaciones
         // valido monto
-        if(monto.value ===""){
-            areaMsjes.innerHTML = "Debe ingresar el monto";
+        if(monto.value ==="" || monto.value <= 0){
+            areaMsjes.innerHTML = "Debe ingresar el monto y debe ser superior a 0";
             areaMsjes.style.display="block;"
             monto.focus();
         }else{
             if( Number.isInteger(parseInt(monto.value))){
-                if(interes.value ===""){
-                    areaMsjes.innerHTML = "Debe ingresar el interes";
+                if(interes.value ==="" || interes.value <= 0){
+                    areaMsjes.innerHTML = "Debe ingresar el interes y debe ser superior a 0";
                     areaMsjes.style.display="block;"
                     interes.focus();
                 }else{
-                    if(anios.value ===""){
-                        areaMsjes.innerHTML = "Debe ingresar los años";
+                    if(anios.value ==="" || anios.value <= 0){
+                        areaMsjes.innerHTML = "Debe ingresar los años y debe ser superior a 0";
                         areaMsjes.style.display="block;"
                         anios.focus();
                     }else{
